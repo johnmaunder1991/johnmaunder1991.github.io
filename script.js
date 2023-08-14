@@ -3,10 +3,22 @@ showSlide(currentSlide);
 
 function moveSlide(n) {
     var nextSlide = currentSlide + n;
-    if (nextSlide < 0 || nextSlide >= document.getElementsByClassName("slide").length) {
+    var slides = document.getElementsByClassName("slide");
+
+    if (nextSlide < 0 || nextSlide >= slides.length) {
         return; // Exit if trying to move before the first slide or after the last slide
     }
-    showSlide(nextSlide);
+
+    var img = new Image();
+    img.src = slides[nextSlide].src;
+
+    img.onload = function() {
+        showSlide(nextSlide); // Show the slide if the image exists
+    };
+
+    img.onerror = function() {
+        // Do nothing or provide a fallback if the image doesn't exist
+    };
 }
 
 function showSlide(n) {
@@ -17,6 +29,7 @@ function showSlide(n) {
     slides[n].style.display = "block";
     currentSlide = n;
 }
+
 document.addEventListener("keydown", function(event) {
     if (event.key === "ArrowLeft") {
         moveSlide(-1);
