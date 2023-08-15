@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Photo Album</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boneschool Cases</title>
+  <style>
+    body {
+      background-color: #0e79af;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center; /* Centering the text content */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centering flex items horizontally */
+      justify-content: center; /* Centering flex items vertically */
+      min-height: 100vh; /* Full viewport height */
+    }
+    .logo {
+      width: 50px;
+    }
+    .cases {
+      margin: 20px;
+    }
+    .link {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="photo-album">
-        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-        <a class="next" onclick="moveSlide(1)">&#10095;</a>
-        <img class="slide" src="Slide1.jpeg">
-        <img class="slide" src="Slide2.jpeg">
-        <img class="slide" src="Slide3.jpeg">
-        <img class="slide" src="Slide4.jpeg">
-        <img class="slide" src="Slide5.jpeg">
-        <img class="slide" src="Slide6.jpeg">
-        <img class="slide" src="Slide7.jpeg">
-        <img class="slide" src="Slide8.jpeg">
-        <img class="slide" src="Slide9.jpeg">
-        <img class="slide" src="Slide10.jpeg">
-        <img class="slide" src="Slide11.jpeg">
-        <img class="slide" src="Slide12.jpeg">
-        <img class="slide" src="Slide13.jpeg">
-    </div>
-    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+  <img src="logo.png" alt="Logo" class="logo">
+  <h1>Boneschool Cases</h1>
+  <div class="cases">
+    <a href="Case1/index.html" class="link">Case 1</a>
+    <br>
+    <a href="Case2/index.html" class="link">Case 2</a>
+    <br>
+    <a href="Case3/index.html" class="link">Case 3</a>
+  </div>
 </body>
 </html>
